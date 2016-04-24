@@ -2,12 +2,23 @@
   <%= Organizer::ProposalMailerTemplate.new(@event.reject, @event,
       @proposal, [ :proposal_title ]).render %>
 <% else %>
-    Thank you for your proposal to <%= @event.name %>. Our program committee received many great talk submissions this year, and that's allowed us to put together an exciting program.
+    Hello,
 
-    As a result of the number of talks submitted, however, we've had to turn down a lot of excellent proposals. I'm sorry to say that we were not able to accept your submission titled, <%= @proposal.title %>, this year. This is always the toughest part knowing that we simply can't fit all the good talks in. We hope that you'll still be able to attend the conference.
+    Thank you for your submission to RedDotRubyConf 2016's Call for Proposal.
 
-    Thanks again for your submission as we really appreciate your willingness to share with the community.
-  
-    The <%= @event.name %> Program Committee
+    Our program committee received many great talk submissions this year, and that's allowed us to put together an exciting program.
 
+    As a result of the number of talks submitted, however, we've had to turn down a lot of excellent proposals.
+    I'm sorry to say that we were not able to accept your submission titled, "<%= @proposal.title %>", this year.
+    This is always the toughest part knowing that we simply can't fit all the good talks in.
+
+    Nevertheless, we still hope to see you at this year's conference and as promised, we have reserved ticket space for you.
+    Please use this discount code: "CFP-PARTICIPANT" to enjoy Super Early Bird rate at SGD 255.
+
+    Thank you once again for your submission as we really appreciate your willingness to share with the community.
+
+    Cheers,
+    Winston
+
+    Organiser, RedDotRubyConf
 <% end %>
